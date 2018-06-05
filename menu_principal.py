@@ -18,8 +18,11 @@ def menu_p():
         if(opci.lower() == "registrar"):
             menu_dat()
         elif(opci.lower() == "ver"):
-            for x in datos:
-                print (x,":",datos[x])
+            if (datos['nombre'] == "nada"):
+                gifto()
+            else:
+                for x in datos:
+                    print (x,":",datos[x])
         if (opci.lower() == "salir"):
             print("gracias por usar esta app")
             break

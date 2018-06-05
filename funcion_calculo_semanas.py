@@ -1,10 +1,13 @@
 from datetime import datetime
-
+import os
+def gifto():
+    travo = os.system('travolta.gif')
+    print(travo)
 def ultima_regla():
     fecha1 = datetime.now()
     formato_fecha = "%d/%m/%Y"
     print("ingrese la fecha de su ultima regla")
-    fecha2 = datetime.strptime(input("ingrese fecha (dd/mm/aa): "), formato_fecha)
+    fecha2 = datetime.strptime(input("ingrese fecha (dia/mes/año): "), formato_fecha)
     while (fecha2 > fecha1):
         fecha2 = datetime.strptime(input("ingrese una fecha valida (dia/mes/año): "), formato_fecha)
     diferencia = fecha1 - fecha2
@@ -36,7 +39,7 @@ def menu_dat():
         print("ingrese sus datos")
         print("----------------------------------------")
         ingreso_datos()
-        eleccion = input("desea modificar sus datos? (si/no)")
+        eleccion = input("desea modificar sus datos? (si/no): ")
         if (eleccion.lower() == "si"):
             menu_dat()
         else:
