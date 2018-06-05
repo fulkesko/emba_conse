@@ -13,7 +13,7 @@ def ultima_regla():
 
 
 
-datos = {'nombre': "", 'semanas': "", 'tipo_parto': ""}
+datos = {'nombre': "nada", 'semanas': "nada", 'tipo_parto': "nada"}
 
 def ingreso_datos():
     while(True):
