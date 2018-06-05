@@ -9,6 +9,5 @@ def menu_dat():
         eleccion = input("desea modificar sus datos? (si/no)")
         if (eleccion.lower() == "si"):
             menu_dat()
-        break
-
-menu_dat()
+        else:
+            break
