@@ -20,9 +20,11 @@ def menu_p():
         elif(opci.lower() == "ver"):
             if (datos['nombre'] == "nada"):
                 gifto()
-            else:
                 for x in datos:
-                    print (x,":",datos[x])
+                    print(x, ":", datos[x])
+                else:
+                    for x in datos:
+                        print (x,":",datos[x])
         if (opci.lower() == "salir"):
             print("gracias por usar esta app")
             break
