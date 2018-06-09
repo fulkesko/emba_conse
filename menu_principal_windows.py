@@ -15,16 +15,17 @@ def menu_p():
         print("----------------------------------------")
         opci = input("eliga su opcion: ")
 
-        if(opci.lower() == "registrar"):
+        if(opci.lower().strip() == "registrar"):
             menu_dat()
         elif(opci.lower().strip() == "ver"):
             if (datos['nombre'] == "nada"):
                 gifto()
                 for x in datos:
                     print(x, ":", datos[x])
-        if (opci.lower() == "salir"):
+        if (opci.lower().strip() == "salir"):
             print("gracias por usar esta app")
             break
+        print("ingrese una opcion valida!!")
 
 
 menu_p()

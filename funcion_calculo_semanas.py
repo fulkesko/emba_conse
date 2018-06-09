@@ -3,6 +3,7 @@ import os
 def gifto():
     travo = os.system('travolta.gif')
     print(travo)
+
 def ultima_regla():
     fecha1 = datetime.now()
     formato_fecha = "%d/%m/%Y"
@@ -21,16 +22,16 @@ datos = {'nombre': "nada", 'semanas': "nada", 'tipo_parto': "nada"}
 def ingreso_datos():
     while(True):
         nombre = input("ingrese su nombre: ")
-        datos['nombre'] = nombre
+        datos['nombre'] = nombre.strip()
         t_emba = ultima_regla()
         datos['semanas'] = t_emba
-        t_part = input("¿Que tipo de parto espera tener?: ")
-        datos['tipo_parto'] = t_part
-        if (t_part == "cesarea"):
-            print("toma estos consejos te pueden ayudar: ",
+        t_part = input("¿Que tipo de parto espera tener?(c/n): ")
+        datos['tipo_parto'] = t_part.strip()
+        if (t_part == "cesarea" or t_part.__contains__("c")):
+            print("toma estos consejos te pueden ayudar: "," cesarea",
                   "https://www.bebesymas.com/salud-de-la-madre/parto-por-cesarea-siete-consejos-que-te-ayudaran-a-recuperarte-mas-facilmente")
-        elif (t_part == "normal"):
-            print("estos consejos pueden ser de utilidad: ", "https://elpais.com/elpais/2016/11/16/media/1479322247_869545.html")
+        elif (t_part == "normal" or t_part.__contains__("n")):
+            print("estos consejos pueden ser de utilidad: ","parto normal" ,"https://elpais.com/elpais/2016/11/16/media/1479322247_869545.html")
         break
 
 def menu_dat():
@@ -40,7 +41,7 @@ def menu_dat():
         print("----------------------------------------")
         ingreso_datos()
         eleccion = input("desea modificar sus datos? (si/no): ")
-        if (eleccion.lower() == "si"):
+        if (eleccion.lower() == "si" or eleccion.lower().strip().__contains__("s") or eleccion.lower().strip().__contains__("yes")):
             menu_dat()
         else:
             break
