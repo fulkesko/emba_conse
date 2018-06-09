@@ -22,9 +22,6 @@ def menu_p():
                 gifto()
                 for x in datos:
                     print(x, ":", datos[x])
-                else:
-                    for x in datos:
-                        print (x,":",datos[x])
         if (opci.lower() == "salir"):
             print("gracias por usar esta app")
             break
