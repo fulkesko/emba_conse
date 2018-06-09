@@ -17,7 +17,7 @@ def menu_p():
 
         if(opci.lower() == "registrar"):
             menu_dat()
-        elif(opci.lower() == "ver"):
+        elif(opci.lower().strip() == "ver"):
             for x in datos:
                 print(x, ":", datos[x])
         if (opci.lower() == "salir"):

@@ -17,7 +17,7 @@ def menu_p():
 
         if(opci.lower() == "registrar"):
             menu_dat()
-        elif(opci.lower() == "ver"):
+        elif(opci.lower().strip() == "ver"):
             if (datos['nombre'] == "nada"):
                 gifto()
                 for x in datos:
