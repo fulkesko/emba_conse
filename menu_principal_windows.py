@@ -20,12 +20,14 @@ def menu_p():
         elif(opci.lower().strip() == "ver"):
             if (datos['nombre'] == "nada"):
                 gifto()
+            else:
                 for x in datos:
                     print(x, ":", datos[x])
         if (opci.lower().strip() == "salir"):
             print("gracias por usar esta app")
             break
-        print("ingrese una opcion valida!!")
+
+
 
 
 menu_p()

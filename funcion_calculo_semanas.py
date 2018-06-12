@@ -1,5 +1,6 @@
 from datetime import datetime
 import os
+
 def gifto():
     travo = os.system('travolta.gif')
     print(travo)
@@ -25,8 +26,9 @@ def ingreso_datos():
         datos['nombre'] = nombre.strip()
         t_emba = ultima_regla()
         datos['semanas'] = t_emba
-        t_part = input("¿Que tipo de parto espera tener?(c/n): ")
-        datos['tipo_parto'] = t_part.strip()
+        t_part = input("¿Que tipo de parto espera tener?(c/n): ").strip()
+
+        datos['tipo_parto'] = t_part
         if (t_part == "cesarea" or t_part.__contains__("c")):
             print("toma estos consejos te pueden ayudar: "," cesarea",
                   "https://www.bebesymas.com/salud-de-la-madre/parto-por-cesarea-siete-consejos-que-te-ayudaran-a-recuperarte-mas-facilmente")

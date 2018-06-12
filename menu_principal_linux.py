@@ -23,6 +23,6 @@ def menu_p():
         if (opci.lower().strip() == "salir"):
             print("gracias por usar esta app")
             break
-        print("ingrese una opcion valida!!")
+
 
 menu_p()
